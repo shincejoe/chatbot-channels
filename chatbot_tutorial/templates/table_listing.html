@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Statistic</title>
+    <style>
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+
+</style>
+</head>
+<body>
+<div class="container" style="margin: 10px 100px;">
+<table>
+<tr>
+  <th>Id</th>
+  <th>User Name</th>
+  <th>Fat Count</th>
+  <th>Stupid Count</th>
+    <th>Dumb Count</th>
+</tr>
+    {% for entry in entry_list %}
+    <tr>
+        <th> {{ entry.id }}</th>
+        <th> {{ entry.username }}</th>
+        <th> {{ entry.fat }}</th>
+        <th> {{ entry.stupid }}</th>
+        <th> {{ entry.dumb }}</th>
+    </tr>
+
+    {% endfor %}
+</table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div style=" margin: 50px;text-align: center;">
+  <button type="button" data-backdrop="static" data-keyboard="false" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  View User List
+
+  </button>
+  </div>
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+      Select User
+    </button>
+    <div class="dropdown-menu">
+      {% for user in users %}
+      <a class="dropdown-item" value="{{ user.id }}">{{ user.username }}</a>
+  {% endfor %}
+
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</body>
+</html>
